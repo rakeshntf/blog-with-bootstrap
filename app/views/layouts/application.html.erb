@@ -41,6 +41,7 @@
     </div><br/>
     <br/>
 
+
     <div class="container"><br/>
         <div class="row">
           <div class="span9">
@@ -48,9 +49,21 @@
             <%= yield %>
           </div>
           <br/>
-          <div class="span3">
+          <div class="span3"><br>
             <div class="well sidebar-nav">
               <span style="color:blue">
+              <h4>
+                <% if user_signed_in? %>
+      Signed in as <%= current_user.email %>. Not you?
+        <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+    <% else %>
+      <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+      <% end %>
+      </div>
+      <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <% end %>
+</h4>
               <h3>Sidebar</h3>
               <ul class="nav nav-list">
                 
@@ -72,6 +85,10 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <%= javascript_include_tag "application" %>
+
+
+
+
 
   </body>
 </html>
