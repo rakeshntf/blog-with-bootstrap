@@ -13,11 +13,10 @@ gem 'paperclip'
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
-   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-
+  gem 'coffee-rails', '~> 3.2.1'
+  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'uglifier', '>= 1.0.3'
 end
-
 gem 'therubyracer', :platforms => :ruby
 
 gem "twitter-bootstrap-rails"
