@@ -1,0 +1,1 @@
+config.omniauth :twitter, "KEY", "SECRET"
