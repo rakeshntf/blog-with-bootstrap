@@ -51,6 +51,7 @@ GEM
       multi_json (~> 1.0)
     faraday (0.8.7)
       multipart-post (~> 1.1)
+    hashie (2.0.3)
     hike (1.2.2)
     i18n (0.6.1)
     journey (1.0.4)
@@ -63,9 +64,16 @@ GEM
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    metaclass (0.0.1)
     mime-types (1.22)
+    mocha (0.13.3)
+      metaclass (~> 0.0.1)
     multi_json (1.7.2)
     multipart-post (1.2.0)
+    nifty-generators (0.4.6)
+    omniauth (1.1.4)
+      hashie (>= 1.2, < 3)
+      rack
     orm_adapter (0.0.7)
     paperclip (3.4.1)
       activemodel (>= 3.0.0)
@@ -142,6 +150,9 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise (~> 1.4.9)
   jquery-rails
+  mocha
+  nifty-generators
+  omniauth
   paperclip
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)

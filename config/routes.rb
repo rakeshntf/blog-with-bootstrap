@@ -1,8 +1,12 @@
 Web::Application.routes.draw do
+  match '/auth/:provider/callback' => 'authentications#create'
+  resources :authentications
+
 
   devise_for :users
 
   resources :homes  do  
+
   resources :comments
 end
   # The priority is based upon order of creation:
